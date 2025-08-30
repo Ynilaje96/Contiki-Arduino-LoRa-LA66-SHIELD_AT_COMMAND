@@ -1,0 +1,831 @@
+Membro de arquivo incluído para satisfazer referência por arquivo (símbolo)
+
+contiki-arduino.a(process.o)  obj_arduino/serial-line.o (process_current)
+contiki-arduino.a(ringbuf.o)  obj_arduino/serial-line.o (ringbuf_init)
+contiki-arduino.a(contiki-arduino)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o (main)
+contiki-arduino.a(clock.o)    contiki-arduino.a(contiki-arduino) (clock_init)
+contiki-arduino.a(procinit.o)
+                              contiki-arduino.a(contiki-arduino) (procinit_init)
+contiki-arduino.a(autostart.o)
+                              contiki-arduino.a(contiki-arduino) (autostart_start)
+contiki-arduino.a(etimer.o)   contiki-arduino.a(clock.o) (etimer_request_poll)
+contiki-arduino.a(rs232.o)    contiki-arduino.a(contiki-arduino) (rs232_init)
+contiki-arduino.a(timer.o)    contiki-arduino.a(etimer.o) (timer_set)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                              RX_UART.co (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                              RX_UART.co (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(iob.o)
+                              contiki-arduino.a(rs232.o) (__iob)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o)
+                              RX_UART.co (printf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf_p.o)
+                              contiki-arduino.a(contiki-arduino) (printf_P)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(puts.o)
+                              RX_UART.co (puts)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(snprintf.o)
+                              RX_UART.co (snprintf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o) (vfprintf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen_P.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o) (strnlen_P)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o) (strnlen)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(fputc.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o) (fputc)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(ultoa_invert.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o) (__ultoa_invert)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o) (__prologue_saves__)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o) (__epilogue_restores__)
+
+Alocação de símbolos comuns
+Símbolo comum       tamanho           arquivo
+
+process_maxevents   0x1               contiki-arduino.a(process.o)
+sleepseconds        0x4               contiki-arduino.a(clock.o)
+seconds             0x4               contiki-arduino.a(clock.o)
+input_handler_0     0x2               contiki-arduino.a(rs232.o)
+serial_line_event_message
+                    0x1               obj_arduino/serial-line.o
+__iob               0x6               /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(iob.o)
+
+Configuração de memória
+
+Nome             Origem             Tamanho            Atributos
+text             0x0000000000000000 0x0000000000008000 xr
+data             0x0000000000800100 0x0000000000000800 rw !x
+eeprom           0x0000000000810000 0x0000000000000400 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Mapa de memória e script de vinculador
+
+Endereço de seção .data definido para 0x800100
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+Endereço de seção .bootloader definido para 0x1f800
+LOAD RX_UART.co
+LOAD obj_arduino/software_uart_serial_line.o
+LOAD obj_arduino/serial-line.o
+LOAD contiki-arduino.a
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libatmega328p.a
+END GROUP
+                0x0000000000000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x0000000000800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x0000000000008000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x0000000000000800]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x0000000000000400]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x17fe
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+                0x0000000000000068                . = ALIGN (0x2)
+                0x0000000000000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000068        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000068                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+ .progmem.data  0x0000000000000068       0x36 contiki-arduino.a(contiki-arduino)
+                0x000000000000009e                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000000009e                __ctors_start = .
+ *(.ctors)
+                0x000000000000009e                __ctors_end = .
+                0x000000000000009e                __dtors_start = .
+ *(.dtors)
+                0x000000000000009e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000000009e        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x000000000000009e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000000009e        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000000000000aa       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x00000000000000aa                __do_copy_data
+ .init4         0x00000000000000c0       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000000c0                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000000d0        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000d8        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000d8                __vector_22
+                0x00000000000000d8                __vector_1
+                0x00000000000000d8                __vector_24
+                0x00000000000000d8                __vector_12
+                0x00000000000000d8                __bad_interrupt
+                0x00000000000000d8                __vector_6
+                0x00000000000000d8                __vector_23
+                0x00000000000000d8                __vector_25
+                0x00000000000000d8                __vector_13
+                0x00000000000000d8                __vector_17
+                0x00000000000000d8                __vector_19
+                0x00000000000000d8                __vector_7
+                0x00000000000000d8                __vector_5
+                0x00000000000000d8                __vector_4
+                0x00000000000000d8                __vector_9
+                0x00000000000000d8                __vector_2
+                0x00000000000000d8                __vector_21
+                0x00000000000000d8                __vector_15
+                0x00000000000000d8                __vector_8
+                0x00000000000000d8                __vector_10
+                0x00000000000000d8                __vector_16
+                0x00000000000000d8                __vector_20
+ .text          0x00000000000000dc      0x1fc RX_UART.co
+ .text          0x00000000000002d8      0x242 obj_arduino/software_uart_serial_line.o
+                0x00000000000002d8                soft_uart_init
+                0x000000000000030e                soft_uart_write_byte
+                0x000000000000034e                soft_uart_write_string
+                0x0000000000000374                soft_uart_read_buffer
+                0x00000000000003a4                __vector_3
+                0x0000000000000404                __vector_11
+ .text          0x000000000000051a      0x130 obj_arduino/serial-line.o
+                0x00000000000005e6                serial_line_input_byte
+                0x0000000000000630                serial_line_init
+ .text          0x000000000000064a      0x358 contiki-arduino.a(process.o)
+                0x00000000000007be                process_alloc_event
+                0x00000000000007cc                process_exit
+                0x00000000000007d8                process_init
+                0x00000000000007fc                process_run
+                0x00000000000008bc                process_nevents
+                0x00000000000008cc                process_post
+                0x0000000000000916                process_post_synch
+                0x0000000000000934                process_start
+                0x0000000000000976                process_poll
+                0x000000000000098e                process_is_running
+ .text          0x00000000000009a2       0xaa contiki-arduino.a(ringbuf.o)
+                0x00000000000009a2                ringbuf_init
+                0x00000000000009b2                ringbuf_put
+                0x00000000000009f2                ringbuf_get
+                0x0000000000000a2c                ringbuf_size
+                0x0000000000000a36                ringbuf_elements
+ .text          0x0000000000000a4c       0x1a contiki-arduino.a(contiki-arduino)
+                0x0000000000000a4c                init_lowlevel
+ .text          0x0000000000000a66      0x1cc contiki-arduino.a(clock.o)
+                0x0000000000000a66                clock_init
+                0x0000000000000a80                clock_time
+                0x0000000000000a98                clock_seconds
+                0x0000000000000acc                clock_set_seconds
+                0x0000000000000ade                clock_wait
+                0x0000000000000afe                clock_delay_usec
+                0x0000000000000b10                clock_delay_msec
+                0x0000000000000b22                clock_adjust_ticks
+                0x0000000000000bc6                __vector_14
+ .text          0x0000000000000c32       0x20 contiki-arduino.a(procinit.o)
+                0x0000000000000c32                procinit_init
+ .text          0x0000000000000c52       0x38 contiki-arduino.a(autostart.o)
+                0x0000000000000c52                autostart_start
+                0x0000000000000c70                autostart_exit
+ .text          0x0000000000000c8a      0x2be contiki-arduino.a(etimer.o)
+                0x0000000000000cee                etimer_request_poll
+                0x0000000000000e4c                etimer_set
+                0x0000000000000e60                etimer_reset
+                0x0000000000000e74                etimer_restart
+                0x0000000000000e88                etimer_adjust
+                0x0000000000000e9a                etimer_expired
+                0x0000000000000eb0                etimer_expiration_time
+                0x0000000000000ec0                etimer_start_time
+                0x0000000000000ec8                etimer_pending
+                0x0000000000000ede                etimer_next_expiration_time
+                0x0000000000000efa                etimer_stop
+ .text          0x0000000000000f48      0x112 contiki-arduino.a(rs232.o)
+                0x0000000000000f48                __vector_18
+                0x0000000000000f9e                rs232_init
+                0x0000000000000fbe                rs232_send
+                0x0000000000000fd0                rs232_stdout_putchar
+                0x0000000000000ffa                rs232_set_input
+                0x0000000000001008                rs232_print
+                0x000000000000103a                slip_arch_writeb
+                0x0000000000001048                rs232_redirect_stdout
+ .text          0x000000000000105a       0x94 contiki-arduino.a(timer.o)
+                0x000000000000105a                timer_set
+                0x0000000000001072                timer_reset
+                0x0000000000001086                timer_restart
+                0x000000000000109a                timer_expired
+                0x00000000000010ca                timer_remaining
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(iob.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf_p.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(puts.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(snprintf.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen_P.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(fputc.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(ultoa_invert.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .text          0x00000000000010ee        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+                0x00000000000010ee                . = ALIGN (0x2)
+ *(.text.*)
+ .text.startup  0x00000000000010ee       0x44 contiki-arduino.a(contiki-arduino)
+                0x00000000000010ee                main
+ .text.libgcc.mul
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000001132        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x0000000000001132       0x2c /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o)
+                0x0000000000001132                printf
+ .text.avr-libc
+                0x000000000000115e       0x4c /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf_p.o)
+                0x000000000000115e                printf_P
+ .text.avr-libc
+                0x00000000000011aa       0x60 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(puts.o)
+                0x00000000000011aa                puts
+ .text.avr-libc
+                0x000000000000120a       0x60 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(snprintf.o)
+                0x000000000000120a                snprintf
+ .text.avr-libc
+                0x000000000000126a      0x3c2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o)
+                0x000000000000126a                vfprintf
+ .text.avr-libc
+                0x000000000000162c       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen_P.o)
+                0x000000000000162c                strnlen_P
+ .text.avr-libc
+                0x0000000000001642       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen.o)
+                0x0000000000001642                strnlen
+ .text.avr-libc
+                0x0000000000001658       0x78 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(fputc.o)
+                0x0000000000001658                fputc
+ .text.avr-libc
+                0x00000000000016d0       0xbc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(ultoa_invert.o)
+                0x00000000000016d0                __ultoa_invert
+ .text.libgcc.mul
+                0x000000000000178c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.div
+                0x000000000000178c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .text.libgcc   0x000000000000178c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.prologue
+                0x000000000000178c       0x38 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+                0x000000000000178c                __prologue_saves__
+ .text.libgcc.builtins
+                0x00000000000017c4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.fmul
+                0x00000000000017c4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.fixed
+                0x00000000000017c4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .text.libgcc.mul
+                0x00000000000017c4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.div
+                0x00000000000017c4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc   0x00000000000017c4        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.prologue
+                0x00000000000017c4       0x36 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+                0x00000000000017c4                __epilogue_restores__
+ .text.libgcc.builtins
+                0x00000000000017fa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.fmul
+                0x00000000000017fa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+ .text.libgcc.fixed
+                0x00000000000017fa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+                0x00000000000017fa                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000000000017fa        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x00000000000017fa                exit
+                0x00000000000017fa                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000000000017fa        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000000000017fe                _etext = .
+
+.data           0x0000000000800100      0x102 carga com endereço 0x00000000000017fe
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800100        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .data          0x0000000000800100        0x8 RX_UART.co
+                0x0000000000800100                receiver_process
+ .data          0x0000000000800108        0x0 obj_arduino/software_uart_serial_line.o
+ .data          0x0000000000800108        0x8 obj_arduino/serial-line.o
+                0x0000000000800108                serial_line_process
+ .data          0x0000000000800110        0x0 contiki-arduino.a(process.o)
+ .data          0x0000000000800110        0x0 contiki-arduino.a(ringbuf.o)
+ .data          0x0000000000800110        0x6 contiki-arduino.a(contiki-arduino)
+                0x0000000000800110                procinit
+ .data          0x0000000000800116        0x0 contiki-arduino.a(clock.o)
+ .data          0x0000000000800116        0x0 contiki-arduino.a(procinit.o)
+ .data          0x0000000000800116        0x0 contiki-arduino.a(autostart.o)
+ .data          0x0000000000800116        0x8 contiki-arduino.a(etimer.o)
+                0x0000000000800116                etimer_process
+ .data          0x000000000080011e        0xe contiki-arduino.a(rs232.o)
+ .data          0x000000000080012c        0x0 contiki-arduino.a(timer.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(iob.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf_p.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(puts.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(snprintf.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen_P.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(fputc.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(ultoa_invert.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .data          0x000000000080012c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+ *(.data*)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ .rodata        0x000000000080012c        0x4 RX_UART.co
+                0x000000000080012c                autostart_processes
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000000800130       0xd1 RX_UART.co
+ *(.gnu.linkonce.r*)
+                0x0000000000800202                . = ALIGN (0x2)
+ *fill*         0x0000000000800201        0x1 
+                0x0000000000800202                _edata = .
+                0x0000000000800202                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800202      0x1a0
+                0x0000000000800202                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800202        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x0000000000800202        0x2 RX_UART.co
+ .bss           0x0000000000800204       0x47 obj_arduino/software_uart_serial_line.o
+                0x0000000000800204                soft_uart_rx_overflow
+ .bss           0x000000000080024b      0x108 obj_arduino/serial-line.o
+ .bss           0x0000000000800353       0x35 contiki-arduino.a(process.o)
+                0x0000000000800353                process_current
+                0x0000000000800355                process_list
+ .bss           0x0000000000800388        0x0 contiki-arduino.a(ringbuf.o)
+ .bss           0x0000000000800388        0x0 contiki-arduino.a(contiki-arduino)
+ .bss           0x0000000000800388        0x3 contiki-arduino.a(clock.o)
+ .bss           0x000000000080038b        0x0 contiki-arduino.a(procinit.o)
+ .bss           0x000000000080038b        0x0 contiki-arduino.a(autostart.o)
+ .bss           0x000000000080038b        0x4 contiki-arduino.a(etimer.o)
+ .bss           0x000000000080038f        0x1 contiki-arduino.a(rs232.o)
+ .bss           0x0000000000800390        0x0 contiki-arduino.a(timer.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(iob.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf_p.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(puts.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(snprintf.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen_P.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(strnlen.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(fputc.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(ultoa_invert.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_prologue.o)
+ .bss           0x0000000000800390        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_epilogue.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0000000000800390        0x1 obj_arduino/serial-line.o
+                0x0000000000800390                serial_line_event_message
+ COMMON         0x0000000000800391        0x1 contiki-arduino.a(process.o)
+                0x0000000000800391                process_maxevents
+ COMMON         0x0000000000800392        0x8 contiki-arduino.a(clock.o)
+                0x0000000000800392                sleepseconds
+                0x0000000000800396                seconds
+ COMMON         0x000000000080039a        0x2 contiki-arduino.a(rs232.o)
+                0x000000000080039a                input_handler_0
+ COMMON         0x000000000080039c        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(iob.o)
+                0x000000000080039c                __iob
+                0x00000000008003a2                PROVIDE (__bss_end, .)
+                0x00000000000017fe                __data_load_start = LOADADDR (.data)
+                0x0000000000001900                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00000000008003a2        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x00000000008003a2                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 RX_UART.co
+                                         0x12 (tamanho antes de relaxar)
+ .comment       0x0000000000000011       0x12 obj_arduino/software_uart_serial_line.o
+ .comment       0x0000000000000011       0x12 obj_arduino/serial-line.o
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(process.o)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(ringbuf.o)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(contiki-arduino)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(clock.o)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(procinit.o)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(autostart.o)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(etimer.o)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(rs232.o)
+ .comment       0x0000000000000011       0x12 contiki-arduino.a(timer.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(iob.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(printf_p.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(puts.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(snprintf.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(vfprintf_std.o)
+ .comment       0x0000000000000011       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a(fputc.o)
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x188
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 RX_UART.co
+ .debug_aranges
+                0x0000000000000020       0x20 obj_arduino/software_uart_serial_line.o
+ .debug_aranges
+                0x0000000000000040       0x20 obj_arduino/serial-line.o
+ .debug_aranges
+                0x0000000000000060       0x20 contiki-arduino.a(process.o)
+ .debug_aranges
+                0x0000000000000080       0x20 contiki-arduino.a(ringbuf.o)
+ .debug_aranges
+                0x00000000000000a0       0x28 contiki-arduino.a(contiki-arduino)
+ .debug_aranges
+                0x00000000000000c8       0x20 contiki-arduino.a(clock.o)
+ .debug_aranges
+                0x00000000000000e8       0x20 contiki-arduino.a(procinit.o)
+ .debug_aranges
+                0x0000000000000108       0x20 contiki-arduino.a(autostart.o)
+ .debug_aranges
+                0x0000000000000128       0x20 contiki-arduino.a(etimer.o)
+ .debug_aranges
+                0x0000000000000148       0x20 contiki-arduino.a(rs232.o)
+ .debug_aranges
+                0x0000000000000168       0x20 contiki-arduino.a(timer.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x31a8
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x5f4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_info    0x00000000000005f4      0x408 RX_UART.co
+ .debug_info    0x00000000000009fc      0x36a obj_arduino/software_uart_serial_line.o
+ .debug_info    0x0000000000000d66      0x45f obj_arduino/serial-line.o
+ .debug_info    0x00000000000011c5      0x74f contiki-arduino.a(process.o)
+ .debug_info    0x0000000000001914      0x1d1 contiki-arduino.a(ringbuf.o)
+ .debug_info    0x0000000000001ae5      0x3b5 contiki-arduino.a(contiki-arduino)
+ .debug_info    0x0000000000001e9a      0x329 contiki-arduino.a(clock.o)
+ .debug_info    0x00000000000021c3      0x199 contiki-arduino.a(procinit.o)
+ .debug_info    0x000000000000235c      0x1d6 contiki-arduino.a(autostart.o)
+ .debug_info    0x0000000000002532      0x684 contiki-arduino.a(etimer.o)
+ .debug_info    0x0000000000002bb6      0x434 contiki-arduino.a(rs232.o)
+ .debug_info    0x0000000000002fea      0x1be contiki-arduino.a(timer.o)
+
+.debug_abbrev   0x0000000000000000     0x1c12
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x5a2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_abbrev  0x00000000000005a2      0x1c4 RX_UART.co
+ .debug_abbrev  0x0000000000000766      0x20f obj_arduino/software_uart_serial_line.o
+ .debug_abbrev  0x0000000000000975      0x213 obj_arduino/serial-line.o
+ .debug_abbrev  0x0000000000000b88      0x38b contiki-arduino.a(process.o)
+ .debug_abbrev  0x0000000000000f13       0xf9 contiki-arduino.a(ringbuf.o)
+ .debug_abbrev  0x000000000000100c      0x1ad contiki-arduino.a(contiki-arduino)
+ .debug_abbrev  0x00000000000011b9      0x206 contiki-arduino.a(clock.o)
+ .debug_abbrev  0x00000000000013bf      0x11c contiki-arduino.a(procinit.o)
+ .debug_abbrev  0x00000000000014db      0x115 contiki-arduino.a(autostart.o)
+ .debug_abbrev  0x00000000000015f0      0x2db contiki-arduino.a(etimer.o)
+ .debug_abbrev  0x00000000000018cb      0x24f contiki-arduino.a(rs232.o)
+ .debug_abbrev  0x0000000000001b1a       0xf8 contiki-arduino.a(timer.o)
+
+.debug_line     0x0000000000000000     0x13f7
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_line    0x000000000000001a      0x162 RX_UART.co
+ .debug_line    0x000000000000017c      0x285 obj_arduino/software_uart_serial_line.o
+ .debug_line    0x0000000000000401      0x182 obj_arduino/serial-line.o
+ .debug_line    0x0000000000000583      0x35e contiki-arduino.a(process.o)
+ .debug_line    0x00000000000008e1      0x104 contiki-arduino.a(ringbuf.o)
+ .debug_line    0x00000000000009e5      0x1d1 contiki-arduino.a(contiki-arduino)
+ .debug_line    0x0000000000000bb6      0x1c0 contiki-arduino.a(clock.o)
+ .debug_line    0x0000000000000d76       0x85 contiki-arduino.a(procinit.o)
+ .debug_line    0x0000000000000dfb       0xa6 contiki-arduino.a(autostart.o)
+ .debug_line    0x0000000000000ea1      0x310 contiki-arduino.a(etimer.o)
+ .debug_line    0x00000000000011b1      0x168 contiki-arduino.a(rs232.o)
+ .debug_line    0x0000000000001319       0xde contiki-arduino.a(timer.o)
+
+.debug_frame    0x0000000000000000      0x7e0
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x58 RX_UART.co
+ .debug_frame   0x0000000000000058       0xdc obj_arduino/software_uart_serial_line.o
+ .debug_frame   0x0000000000000134       0x50 obj_arduino/serial-line.o
+ .debug_frame   0x0000000000000184      0x148 contiki-arduino.a(process.o)
+ .debug_frame   0x00000000000002cc       0x64 contiki-arduino.a(ringbuf.o)
+ .debug_frame   0x0000000000000330       0x44 contiki-arduino.a(contiki-arduino)
+ .debug_frame   0x0000000000000374      0x118 contiki-arduino.a(clock.o)
+ .debug_frame   0x000000000000048c       0x30 contiki-arduino.a(procinit.o)
+ .debug_frame   0x00000000000004bc       0x4c contiki-arduino.a(autostart.o)
+ .debug_frame   0x0000000000000508      0x150 contiki-arduino.a(etimer.o)
+ .debug_frame   0x0000000000000658       0xf4 contiki-arduino.a(rs232.o)
+ .debug_frame   0x000000000000074c       0x94 contiki-arduino.a(timer.o)
+
+.debug_str      0x0000000000000000      0xc2c
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x208 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_str     0x0000000000000208      0x1f9 RX_UART.co
+                                        0x262 (tamanho antes de relaxar)
+ .debug_str     0x0000000000000401      0x17f obj_arduino/software_uart_serial_line.o
+                                        0x2d4 (tamanho antes de relaxar)
+ .debug_str     0x0000000000000580       0xdf obj_arduino/serial-line.o
+                                        0x2cf (tamanho antes de relaxar)
+ .debug_str     0x000000000000065f      0x12c contiki-arduino.a(process.o)
+                                        0x2f7 (tamanho antes de relaxar)
+ .debug_str     0x000000000000078b       0x3f contiki-arduino.a(ringbuf.o)
+                                        0x1a8 (tamanho antes de relaxar)
+ .debug_str     0x00000000000007ca      0x115 contiki-arduino.a(contiki-arduino)
+                                        0x2f7 (tamanho antes de relaxar)
+ .debug_str     0x00000000000008df      0x100 contiki-arduino.a(clock.o)
+                                        0x24f (tamanho antes de relaxar)
+ .debug_str     0x00000000000009df       0x1a contiki-arduino.a(procinit.o)
+                                        0x1a1 (tamanho antes de relaxar)
+ .debug_str     0x00000000000009f9       0x2a contiki-arduino.a(autostart.o)
+                                        0x1c1 (tamanho antes de relaxar)
+ .debug_str     0x0000000000000a23      0x120 contiki-arduino.a(etimer.o)
+                                        0x352 (tamanho antes de relaxar)
+ .debug_str     0x0000000000000b43       0xc2 contiki-arduino.a(rs232.o)
+                                        0x21f (tamanho antes de relaxar)
+ .debug_str     0x0000000000000c05       0x27 contiki-arduino.a(timer.o)
+                                        0x1a0 (tamanho antes de relaxar)
+
+.debug_loc      0x0000000000000000     0x1b87
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x1c3 RX_UART.co
+ .debug_loc     0x00000000000001c3      0x307 obj_arduino/software_uart_serial_line.o
+ .debug_loc     0x00000000000004ca      0x1ad obj_arduino/serial-line.o
+ .debug_loc     0x0000000000000677      0x5d0 contiki-arduino.a(process.o)
+ .debug_loc     0x0000000000000c47       0xd3 contiki-arduino.a(ringbuf.o)
+ .debug_loc     0x0000000000000d1a       0x56 contiki-arduino.a(contiki-arduino)
+ .debug_loc     0x0000000000000d70      0x299 contiki-arduino.a(clock.o)
+ .debug_loc     0x0000000000001009       0x43 contiki-arduino.a(procinit.o)
+ .debug_loc     0x000000000000104c       0xaa contiki-arduino.a(autostart.o)
+ .debug_loc     0x00000000000010f6      0x5c3 contiki-arduino.a(etimer.o)
+ .debug_loc     0x00000000000016b9      0x2c0 contiki-arduino.a(rs232.o)
+ .debug_loc     0x0000000000001979      0x20e contiki-arduino.a(timer.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000       0x78
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x18 obj_arduino/serial-line.o
+ .debug_ranges  0x0000000000000018       0x18 contiki-arduino.a(contiki-arduino)
+ .debug_ranges  0x0000000000000030       0x18 contiki-arduino.a(clock.o)
+ .debug_ranges  0x0000000000000048       0x30 contiki-arduino.a(etimer.o)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(RX_UART.arduino elf32-avr)
+LOAD linker stubs
+
+.bootloader     0x000000000001f800        0x0
